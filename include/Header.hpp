@@ -38,7 +38,7 @@
 
 
 constexpr int  BTREE_SEARCH_NOT_FOUND -1
-constexpr int  BPTREE_MAX_FILE_PATH_SIZE 1000
+constexpr int  BTREE_MAX_FILE_PATH_SIZE 1000
 constexpr int  BTREE_MAX_KEYS_PER_NODE 50
 
 
