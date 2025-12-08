@@ -1,15 +1,18 @@
 #ifndef TABLE_HPP
 #define TABLE_HPP
 
-
+#include "Expr.hpp"
 #include <cstdio>
 #include <vcetor>
+
 
 namespace sql {
     struct SelectStatement;
     struct JoinDefinition;
     struct TableRef;
 
+
+    //Possible table Reference Type 
     enum TableRefType {
         kTableName;
         kTableSelect;
@@ -30,11 +33,14 @@ namespace sql {
         SelectStatement* select;
         std::vector<TableRef*>* list;
         JoinDefinition* join;
-        bool hasSchema();
 
+        //Return true if a Schema is set.
+        bool hasSchema();
+        // Return the alias if it is a set, name 
         char* getName();
     };
 
+    //Possible types of Joins
     enum JoinType {
         kJoinInner;
         kJoinOuter;
