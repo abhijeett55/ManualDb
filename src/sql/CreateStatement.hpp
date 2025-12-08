@@ -22,11 +22,10 @@ namespace sql {
 
         char* name;
         DataType* type;
-
     };
 
     // Represent SQL Create Statement
-    /** EXAMPLE- "CREATE TABLE students (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)" **/ 
+    /** EXAMPLE - "CREATE TABLE students (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)" **/ 
     struct CreateStatement :  SQLStatement {
         enum CreateType {
             kTable,
